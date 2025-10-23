@@ -84,3 +84,16 @@ std::ostream& operator<<(std::ostream &out, const Bureaucrat &bureaucrat)
 	return out;
 }
 
+void	Bureaucrat::signForm(Form &obj) {
+	try {
+		obj.beSigned(*this);
+		std::cout << _name << " signed " << obj.getName() << std::endl;
+	} catch (Form::GradeTooLowException &error) {
+		std::cerr << _name << " couldn't sign " << obj.getName() << " because " << error.what() << std::endl;
+	} catch (std::exception &error) {
+		std::cerr << error.what() << std::endl;
+	} catch (...) {
+		std::cerr << "Unknown error" << std::endl;
+	}
+}
+
