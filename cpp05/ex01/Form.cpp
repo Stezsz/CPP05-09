@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "Form.hpp"
+#include "Bureaucrat.hpp"
 
 
 Form::Form(void) : _name("Default"), _isSigned(false), _signGrade(150), _executeGrade(150)
