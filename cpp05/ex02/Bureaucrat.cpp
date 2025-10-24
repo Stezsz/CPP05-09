@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "AForm.hpp"
 
 Bureaucrat::Bureaucrat(void) : _name("Default"), _grade(150)
 {
@@ -101,10 +102,8 @@ void	Bureaucrat::executeForm(const AForm &Form) {
 	try {
 		Form.execute(*this);
 		std::cout << _name << " executed " << Form.getName() << std::endl;
-	} catch (AForm::GradeTooLowException &error) {
-		std::cerr << _name << " couldn't execute " << Form.getName() << " because " << error.what() << std::endl;
 	} catch (std::exception &error) {
-		std::cerr << error.what() << std::endl;
+		std::cerr << _name << " couldn't execute " << Form.getName() << " because " << error.what() << std::endl;
 	} catch (...) {
 		std::cerr << "Unknown error" << std::endl;
 	}

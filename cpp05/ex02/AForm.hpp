@@ -16,6 +16,9 @@
 # include <iostream>
 # include <exception>
 # include <string>
+# include <fstream>
+# include <cstdlib>
+# include "Bureaucrat.hpp"
 
 class Bureaucrat;
 
@@ -28,7 +31,7 @@ class AForm
 		const int			_executeGrade;
 	public:
 		AForm(void);
-		~AForm(void);
+		virtual ~AForm(void);
 		AForm(const std::string name, int signGrade, int executeGrade);
 		AForm(const AForm &copy);
 		AForm &operator=(const AForm &other);
@@ -53,8 +56,15 @@ class AForm
 			public:
 				const char *what() const throw();
 		};
+		class FormNotSignedException : public std::exception
+		{
+			public:
+				const char *what() const throw() {
+					return "AForm Exception: Form is not signed.";
+				}
+		};
 };
 
-std::ostream& operator<<(std::ostream &out, const Form &form);
+std::ostream& operator<<(std::ostream &out, const AForm &form);
 
 #endif
