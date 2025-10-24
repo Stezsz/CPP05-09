@@ -14,6 +14,12 @@
 # define INTERN_HPP
 
 # include "AForm.hpp"
+# include "ShrubberyCreationForm.hpp"
+# include "RobotomyRequestForm.hpp"
+# include "PresidentialPardonForm.hpp"
+
+typedef AForm *(*formCreator)(const std::string &target);
+typedef std::pair<std::string, formCreator> formPair;
 
 class Intern
 {

@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= AForm
+NAME		= Intern
 
 CC			= c++
 CURR_DIR	= ./
@@ -19,11 +19,13 @@ RM			= rm -rf
 
 OBJDIR = .objFiles
 
-FILES		= main Bureaucrat AForm PresidentialPardonForm RobotomyRequestForm ShrubberyCreationForm
+FILES		= main Bureaucrat AForm PresidentialPardonForm \
+				RobotomyRequestForm ShrubberyCreationForm Intern
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		= Bureaucrat.hpp AForm.hpp PresidentialPardonForm.hpp RobotomyRequestForm.hpp ShrubberyCreationForm.hpp
+HEADER		= Bureaucrat.hpp AForm.hpp PresidentialPardonForm.hpp \
+				RobotomyRequestForm.hpp ShrubberyCreationForm.hpp Intern.hpp
 
 #Colors:
 GREEN		=	\e[92;5;118m

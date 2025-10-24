@@ -35,17 +35,17 @@ Intern &Intern::operator=(const Intern &other)
 
 static AForm	*createShrubberyCreationForm(const std::string &target)
 {
-	return new ShrubberyCreationForm(target);
+	return (new ShrubberyCreationForm(target));
 }
 
 static AForm	*createRobotomyRequestForm(const std::string &target)
 {
-	return new RobotomyRequestForm(target);
+	return (new RobotomyRequestForm(target));
 }
 
 static AForm	*createPresidentialPardonForm(const std::string &target)
 {
-	return new PresidentialPardonForm(target);
+	return (new PresidentialPardonForm(target));
 }
 
 static formPair	*makePairs(void)
@@ -61,7 +61,7 @@ static formPair	*makePairs(void)
 	return formPairs;
 }
 
-Aform *Intern::makeForm(const std::string &formName, const std::string &target)
+AForm *Intern::makeForm(const std::string &formName, const std::string &target)
 {
 	formPair	*formPairs = makePairs();
 
