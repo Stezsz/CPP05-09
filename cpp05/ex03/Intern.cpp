@@ -14,12 +14,12 @@
 
 Intern::Intern(void)
 {
-	std::cout << "Intern Default Constructor called" << std::endl;
+	//std::cout << "Intern Default Constructor called" << std::endl;
 }
 
 Intern::~Intern(void)
 {
-	std::cout << "Intern Destructor called" << std::endl;
+	//std::cout << "Intern Destructor called" << std::endl;
 }
 
 Intern::Intern(const Intern &copy)

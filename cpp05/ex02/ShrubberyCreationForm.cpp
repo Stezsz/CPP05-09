@@ -14,7 +14,7 @@
 
 ShrubberyCreationForm::ShrubberyCreationForm(void) : AForm("ShrubberyCreationForm", 145, 137)
 {
-	std::cout << "ShrubberyCreationForm Default Constructor called" << std::endl;
+	//std::cout << "ShrubberyCreationForm Default Constructor called" << std::endl;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const std::string &target) : AForm("ShrubberyCreationForm", 145, 137)
@@ -24,7 +24,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(const std::string &target) : AForm(
 
 ShrubberyCreationForm::~ShrubberyCreationForm(void)
 {
-	std::cout << "ShrubberyCreationForm Destructor called" << std::endl;
+	//std::cout << "ShrubberyCreationForm Destructor called" << std::endl;
 }
 
 ShrubberyCreationForm	&ShrubberyCreationForm::operator=(const ShrubberyCreationForm &other)
@@ -44,7 +44,7 @@ void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 
 	if (executor.getGrade() > this->getExecuteGrade())
 		throw AForm::GradeTooLowException();
-	
+
 	std::string filename = this->_target + "_shrubbery";
 	std::ofstream outfile(filename.c_str());
 	if (!outfile.is_open())

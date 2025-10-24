@@ -14,7 +14,7 @@
 
 PresidentialPardonForm::PresidentialPardonForm(void) : AForm("PresidentialPardonForm", 25, 5)
 {
-	std::cout << "PresidentialPardonForm Default Constructor called" << std::endl;
+	// std::cout << "PresidentialPardonForm Default Constructor called" << std::endl;
 }
 
 PresidentialPardonForm::PresidentialPardonForm(const std::string &target) : AForm("PresidentialPardonForm", 25, 5)
@@ -24,7 +24,7 @@ PresidentialPardonForm::PresidentialPardonForm(const std::string &target) : AFor
 
 PresidentialPardonForm::~PresidentialPardonForm(void)
 {
-	std::cout << "PresidentialPardonForm Destructor called" << std::endl;
+	// std::cout << "PresidentialPardonForm Destructor called" << std::endl;
 }
 
 PresidentialPardonForm	&PresidentialPardonForm::operator=(const PresidentialPardonForm &other)
@@ -44,6 +44,6 @@ void	PresidentialPardonForm::execute(Bureaucrat const & executor) const
 
 	if (executor.getGrade() > this->getExecuteGrade())
 		throw AForm::GradeTooLowException();
-	
+
 	std::cout << this->_target << " has been pardoned by Zaphod Beeblebrox." << std::endl;
 }

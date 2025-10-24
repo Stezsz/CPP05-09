@@ -16,12 +16,12 @@
 
 Form::Form(void) : _name("Default"), _isSigned(false), _signGrade(150), _executeGrade(150)
 {
-	std::cout << "Form Default Constructor called" << std::endl;
+	//std::cout << "Form Default Constructor called" << std::endl;
 }
 
 Form::~Form(void)
 {
-	std::cout << "Form Destructor called" << std::endl;
+	//std::cout << "Form Destructor called" << std::endl;
 }
 
 Form::Form(const std::string name, int signGrade, int executeGrade) : _name(name), _isSigned(false), _signGrade(signGrade), _executeGrade(executeGrade)
@@ -30,7 +30,7 @@ Form::Form(const std::string name, int signGrade, int executeGrade) : _name(name
 		throw Form::GradeTooHighException();
 	if (signGrade > 150 || executeGrade > 150)
 		throw Form::GradeTooLowException();
-	std::cout << "Form Parameterized Constructor called" << std::endl;
+	//std::cout << "Form Parameterized Constructor called" << std::endl;
 }
 
 Form::Form(const Form &copy) : _name(copy._name), _isSigned(copy._isSigned), _signGrade(copy._signGrade), _executeGrade(copy._executeGrade)

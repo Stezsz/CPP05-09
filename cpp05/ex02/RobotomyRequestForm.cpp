@@ -14,7 +14,7 @@
 
 RobotomyRequestForm::RobotomyRequestForm(void) : AForm("RobotomyRequestForm", 72, 45)
 {
-	std::cout << "RobotomyRequestForm Default Constructor called" << std::endl;
+	// std::cout << "RobotomyRequestForm Default Constructor called" << std::endl;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(const std::string &target) : AForm("RobotomyRequestForm", 72, 45)
@@ -24,7 +24,7 @@ RobotomyRequestForm::RobotomyRequestForm(const std::string &target) : AForm("Rob
 
 RobotomyRequestForm::~RobotomyRequestForm(void)
 {
-	std::cout << "RobotomyRequestForm Destructor called" << std::endl;
+	// std::cout << "RobotomyRequestForm Destructor called" << std::endl;
 }
 
 RobotomyRequestForm	&RobotomyRequestForm::operator=(const RobotomyRequestForm &other)
@@ -44,7 +44,7 @@ void	RobotomyRequestForm::execute(Bureaucrat const & executor) const
 
 	if (executor.getGrade() > this->getExecuteGrade())
 		throw AForm::GradeTooLowException();
-	
+
 	std::cout << "Bzzzzzz... Vrrrrrr..." << std::endl;
 	if (rand() % 2 == 0)
 		std::cout << this->_target << " has been robotomized successfully!" << std::endl;
