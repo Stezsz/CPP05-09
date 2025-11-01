@@ -6,11 +6,12 @@
 /*   By: strodrig <strodrig@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 10:07:52 by strodrig          #+#    #+#             */
-/*   Updated: 2025/10/23 10:07:52 by strodrig         ###   ########.fr       */
+/*   Updated: 2025/11/01 13:35:11 by strodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 Bureaucrat::Bureaucrat(void) : _name("Default"), _grade(150)
 {
