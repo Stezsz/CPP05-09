@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: strodrig <strodrig@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/10/23 10:01:41 by strodrig          #+#    #+#              #
-#    Updated: 2025/12/05 19:29:17 by strodrig         ###   ########.fr        #
+#    Created: 2025/12/05 19:24:33 by strodrig          #+#    #+#              #
+#    Updated: 2025/12/05 19:24:33 by strodrig         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= Intern
+NAME		= btc
 
 CC			= c++
 FLAGS		= -Wall -Wextra -Werror -std=c++98
@@ -18,12 +18,10 @@ RM			= rm -rf
 
 OBJDIR = .objFiles
 
-FILES		= main Bureaucrat AForm PresidentialPardonForm \
-				RobotomyRequestForm ShrubberyCreationForm Intern
+FILES		= main
 
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		= Bureaucrat.hpp AForm.hpp PresidentialPardonForm.hpp \
-				RobotomyRequestForm.hpp ShrubberyCreationForm.hpp Intern.hpp
+HEADER		= BitcoinExchange.hpp
 
 #Colors:
 GREEN		=	\e[92;5;118m
