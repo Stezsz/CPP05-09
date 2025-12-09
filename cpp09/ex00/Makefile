@@ -18,7 +18,7 @@ RM			= rm -rf
 
 OBJDIR = .objFiles
 
-FILES		= main
+FILES		= main BitcoinExchange
 
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
 HEADER		= BitcoinExchange.hpp
